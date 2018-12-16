@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zoo Concepcion</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <nav>
+            <div class="btn-nav">
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" id="btnTipo" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Tipo</button>
+                    <div class="dropdown-menu menu-transparente" aria-labelledby="btnTipo">
+                        <router-link class="dropdown-item" to="/listarTipo">Listar</router-link>
+                        <router-link class="dropdown-item" to="/agregarTipo">Crear</router-link>
+                    </div>
+                </div> 
+                <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" id="btnSector" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Sector</button>
+                    <div class="dropdown-menu menu-transparente" aria-labelledby="btnSector">
+                        <router-link class="dropdown-item" to="/listarSector">Listar</router-link>
+                        <router-link class="dropdown-item" to="/agregarSector">Crear</router-link>
+                    </div>
+                </div>
+            </div>
+    </nav>
+        <div>
+            <!--esta es la parte que se cargara dinamicamente-->
+            <router-view></router-view>
+            <!-- <listar-tipo></listar-tipo>
+            <agregar-tipo></agregar-tipo> -->
+        </div>
+    <footer Class="footer navbar-fixed-bottom">
+        <div class="footer-colums">
+            <p>
+                e-mail: <strong>zoo.concepcion@gmail.cl</strong>
+            </p>
+        </div>
+        <div>
+            <h3>ZOO Concepción</h3>
+            <p>
+                AV. siempre viva #1004 <br /> Telefono: <strong> 23456789</strong>
+            </p>
+        </div>
+    </footer>
+    </div>
+    <link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/zoo_app/css/baseStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src="servicios/config.js"></script>
+    <script src="servicios/TipoService.js"></script>
+    <script src="servicios/SectorService.js"></script>
+    <script src="componentes/listarTipo.js"></script>
+    <script src="componentes/listarSector.js"></script>
+    <script src="componentes/agregarTipo.js"></script>
+    <script src="componentes/agregarSector.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
